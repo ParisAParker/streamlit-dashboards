@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "streamlit-dashboards"
+version = "0.1.0"
+description = "Reusable Streamlit dashboard components and event tracking"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Proprietary"}
+dependencies = ["streamlit>=1.40,<2", "pandas>=2,<3", "plotly>=5,<7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "build>=1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
